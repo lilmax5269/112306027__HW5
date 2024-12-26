@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Layout</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 330px 540px;
+            width: 900px;
+            height: 1150px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Left Panel */
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            background-color: #e8f0fe;
+        }
+
+        .photo-panel {
+            height: 50%;
+            background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dailynews.com%2F2013%2F12%2F01%2Fpacers-paul-george-makes-winning-his-priority-even-over-coming-home%2F&psig=AOvVaw1FGry3cKJQKtf-ReudA71s&ust=1735301967743000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjCs_K1xYoDFQAAAAAdAAAAABAP') no-repeat center center/cover;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .text-content .about-me {
+            margin-bottom: 20px;
+        }
+
+        .text-content .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .text-content .nccu-icon img {
+            width: 60px;
+            align-self: center;
+        }
+
+        /* Right Panel */
+        .right-panel {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .right-panel section {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .right-panel h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Education Section */
+        .education .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .timeline .entry {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .entry .year {
+            font-weight: bold;
+        }
+
+        /* Homework List */
+        .homework-list a {
+            text-decoration: none;
+            color: #1a73e8;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .homework-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Favorite Music */
+        .favorite-music {
+            text-align: center;
+        }
+
+        .favorite-music .music-grid {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .music-grid a img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="photo-panel"></div>
+            <div class="text-content">
+                <div class="about-me">
+                    <h3>About Me</h3>
+                    <p>我是政大資管系大二學生，平常興趣是打籃球。</p>
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Info</h4>
+                    <p>Email: max.liao9329@gmail.com</p>
+                    <p>Phone: 0933958905</p>
+                </div>
+                <div class="nccu-icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXfXIjf1W_k-624OF4i1Jiu51C4rYe5p3eNA&s" alt="NCCU Icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <section class="education">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="entry">
+                        <span class="year">2022</span>
+                        <span>畢業於師大附中</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="homework-list">
+                <h2>Homework List</h2>
+                <a href="#">Homework 1</a>
+                <a href="#">Homework 2</a>
+                <a href="#">Homework 3</a>
+            </section>
+
+            <section class="favorite-music">
+                <h2>Favorite Music</h2>
+                <div class="music-grid">
+                    <a href="https://www.youtube.com/watch?v=U-l4ya3ejko"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F2poS2QcypS5Lm10KL4J8V0&psig=AOvVaw3SVLTZp9B1DuY-701exhzB&ust=1735302502594000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDLsu63xYoDFQAAAAAdAAAAABAE" alt="Favorite Music"></a>
+                </div>
+                <div class="note">
+                    This song keeps me motivated and inspired every day.
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
